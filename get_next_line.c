@@ -67,10 +67,7 @@ char	*trim_to_nextline(char *buff)
 
 	newline_pos = ft_strchr(buff, '\n'); // Find the first occurence of '\n' in buff
 	if (!newline_pos) // Check for '\n'
-	{
-		remain_buff = NULL;
 		return (gnl_free(&buff));
-	}
 	else // Calculate newstring position
 		newstr_i = (newline_pos - buff) + 1;
 	if (!buff[newstr_i]) // Check if this position is ending
